@@ -1,8 +1,0 @@
-#!/bin/sh
-
-set -e
-
-echo "===> Restoring the *production* DB from data/ohana_api_production.dump..."
-read -rsp $'Are you sure? Ctrl-C to abort. Any key to continue...\n' -n1 key
-pg_restore -c --no-owner -d ohana_api_production data/ohana_api_production.dump
-echo "===> Done restoring the DB."
